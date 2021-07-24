@@ -7,7 +7,7 @@
 
 This project was to get around the problem of how to create multi-architectured images without making lots of different tags and images. The automation currently makes this look like one single image in your repository. Buildx is a Docker CLI plugin which extends the Docker build command and provides some additional features. These are provided by the Moby Project which is a new build mechanism in Docker.
 
-Using these new features you can carrying out builds on multi-nodes, different hosts and new build functionality like a cache mechanism which is now a built in feature.
+Using these new features you can carry out builds on multi-nodes, different hosts and new build functionality like a cache mechanism which is now a built in feature.
 
 Let's start with sianrelease.go, a basic hello world program in Go which is hosted on my OS architecture remotely.
 
@@ -180,9 +180,7 @@ docker buildx imagetools inspect sianrachel/sianrelease:multiarc
 
 This will lift and show your Docker images that were pushed to Docker Hub.
 
-This should show three images listed that have multi arc support. This is the information which is included in a manifest. It is worth noting that Docker does figure out which architecture you are working on and compiles the manifest accordingly. It finds the tagged image for that particular architecture, so you don't have to specify this manually.
-
-This supercedes the old manual setting of the environment variable.
+This should show three images listed that have multi arc support. This is the information which is included in a manifest. It is worth noting that Docker does figure out which architecture you are working on and compiles the manifest accordingly. It finds the tagged image for that particular architecture, so you don't have to specify this manually. This supercedes the old manual setting of the environment variable.
 
 ### Resources
 
